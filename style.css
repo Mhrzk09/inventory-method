@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+canvas {
+  margin-top: 20px;
+}

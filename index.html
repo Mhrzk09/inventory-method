@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventori ABC, LTC, Wagner-Whitin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Perhitungan Persediaan: ABC, LTC, Wagner-Whitin</h1>
+
+  <h2>📥 Upload atau Input Data Barang</h2>
+  <p><strong>🔽 Cara 1:</strong> Unggah file Excel (.xlsx)</p>
+  <input type="file" id="excelFile" accept=".xlsx" />
+
+  <p><strong>🔽 Cara 2:</strong> Copy dan paste data dari Excel ke kolom berikut:</p>
+  <p><em>Format kolom (pisah dengan tab):</em></p>
+  <pre>
+Nama Barang	Barang Masuk	Permintaan	Harga per Unit	Biaya Simpan	Biaya Pesan
+Barang A	100	200	5000	100	200
+Barang B	80	120	3000	80	200
+Barang C	50	100	1000	50	200
+  </pre>
+  <textarea id="excelInput" rows="10" placeholder="Paste data dari Excel ke sini..."></textarea>
+  <button onclick="importData()">Proses Data</button>
+
+  <h2>⚙️ Parameter dan Proses</h2>
+  <label>Persentase Buffer (%):</label>
+  <input type="number" id="bufferPercent" value="10" />
+  <button onclick="calculateInventory()">Hitung Inventori</button>
+  <button onclick="exportToExcel()">Ekspor ke Excel</button>
+
+  <div id="resultArea"></div>
+  <canvas id="demandChart" width="600" height="300"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
